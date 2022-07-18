@@ -4,12 +4,13 @@ class BooksController < ApplicationController
   end
   
   def create
-    book = Book.new(book_params)
+    book = Book.index(book_params)
     book.save
-    redirect_to '/homes/top'
+    redirect_to '/books/86199'
   end
 
   def show
+    @book=Book.find(params[:id])
   end
 
   def edit
