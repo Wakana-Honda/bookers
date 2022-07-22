@@ -1,15 +1,18 @@
-<div class="text-success">
-  <%= flash[:notice] %>
-</div>
-<div class="text-danger">
-  <%= flash[:alret] %>
-</div>
 
-  <strong>Title</strong>
-  <p><%= @book.title %></p>
-  
-  <strong>Body</strong>
-  <p><%= @book.body %></p>
+<% if flash[:notice] %>
+ <div class="alert alert-success" role="alert">
+ <p class="notice text-center" style="color:green;"><%= flash[:notice] %></p></div>
+<% end %>
+
+<p>
+ <strong>Title:</strong>
+ <%= @book.title %>
+</p>
+
+<p>
+ <strong>Body:</strong>
+ <%= @book.body %>
+</p>
   
   <%= link_to "Edit", edit_book_path(@book.id) %>
   |
