@@ -1,4 +1,9 @@
-<h2>Book was successfully created<h2>
+<div class="text-success">
+  <%= flash[:notice] %>
+</div>
+<div class="text-danger">
+  <%= flash[:alret] %>
+</div>
 
   <strong>Title</strong>
   <p><%= @book.title %></p>
