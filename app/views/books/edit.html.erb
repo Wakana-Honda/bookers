@@ -1,12 +1,15 @@
 <h1>Editing Book</h1>
 
 <% if @book.errors.any? %>
- <%= @book.errors.count %>件のエラーが発生しました
+ <div id="error_explanation">
+
+ <h2><%= @book.errors.count %>error prohibited this book from being saved:</h2>
  <ul>
   <% @book.errors.full_messages.each do |message| %>
    <li><%= message %></li>
   <% end %>
  </ul>
+ </div>
  <% end %>
 
 
